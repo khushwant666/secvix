@@ -5,7 +5,7 @@ Universal pre-deployment security testing harness for autonomous AI agents (OWAS
 ## Install
 
 ```bash
-npm install secvix
+npm install @khushwant.r/secvix
 ```
 
 ## Quick start
@@ -18,7 +18,7 @@ npx secvix scan -c secvix.yaml
 ## SDK
 
 ```typescript
-import { loadConfig, runScan, renderSarifReport } from "secvix";
+import { loadConfig, runScan, renderSarifReport } from "@khushwant.r/secvix";
 
 const config = await loadConfig("secvix.yaml");
 const report = await runScan({ config });

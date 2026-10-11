@@ -1,5 +1,8 @@
 {
-  "name": "secvix",
+  "name": "@khushwant.r/secvix",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.1.0",
   "description": "Universal pre-deployment security testing harness for autonomous AI agents",
   "type": "module",

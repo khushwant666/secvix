@@ -9,6 +9,7 @@ import { runScan } from "../src/runner/engine.js";
 import { renderSarifReport } from "../src/reporters/sarif.js";
 import { renderTerminalReport } from "../src/reporters/terminal.js";
 import { SEVERITIES, type Severity } from "../src/types/report.js";
+import pkg from "../package.json" with { type: "json" };
 
 const program = new Command();
 
@@ -17,7 +18,7 @@ program
   .description(
     "Universal pre-deployment security testing harness for autonomous AI agents",
   )
-  .version("0.1.0");
+  .version(pkg.version);
 
 program
   .command("init")

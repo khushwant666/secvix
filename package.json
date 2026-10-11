@@ -1,0 +1,55 @@
+{
+  "name": "secvix",
+  "version": "0.1.0",
+  "description": "Universal pre-deployment security testing harness for autonomous AI agents",
+  "type": "module",
+  "author": "Khushwant Yadav",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khushwant666/secvix.git"
+  },
+  "bin": {
+    "secvix": "./dist/bin/secvix.js"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "secvix.yaml"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc && node scripts/postbuild.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.ts\" \"bin/**/*.ts\" \"tests/**/*.ts\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "audit": "npm audit --audit-level=high",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "ora": "^8.2.0",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.4.4",
+    "vitest": "^5.0.3"
+  }
+}
